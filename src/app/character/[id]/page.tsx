@@ -159,33 +159,24 @@ export default async function CharacterDetailPage({ params }: DetailPageProps) {
           </Card>
 
           {/* Informações Adicionais */}
-          <Card className="bg-card/80 backdrop-blur-sm border-primary/20 shadow-lg hover:shadow-xl transition-all duration-300 md:col-span-2">
-            <CardHeader>
-              <CardTitle className="text-xl font-inter-heading text-primary flex items-center gap-2">
-                Additional Info
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-3">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                <div className="space-y-1">
-                  <p className="font-medium text-muted-foreground"> 
-                    Created
-                  </p>
-                  <p className="font-inter-subheading">
-                    {new Date(character.created).toLocaleDateString("pt-BR")}
-                  </p>
-                </div>
-                <a
-                  href={character.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200 font-inter-subheading text-sm"
-                >
-                  View on API
-                </a>
+          <div className="p-6 md:col-span-2">
+            <div className="flex flex-row items-center justify-between">
+              <div className="space-y-1">
+                <p className="font-medium text-muted-foreground">Created</p>
+                <p className="font-inter-subheading">
+                  {new Date(character.created).toLocaleDateString("pt-BR")}
+                </p>
               </div>
-            </CardContent>
-          </Card>
+              <a
+                href={character.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200 font-inter-subheading text-sm"
+              >
+                View on API
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
