@@ -12,7 +12,20 @@ const CharacterSchema = z.object({
   name: z.string(),
   status: z.string(),
   species: z.string(),
+  type: z.string(),
+  gender: z.string(),
+  origin: z.object({
+    name: z.string(),
+    url: z.string(),
+  }),
+  location: z.object({
+    name: z.string(),
+    url: z.string(),
+  }),
   image: z.string().url(),
+  episode: z.array(z.string()),
+  url: z.string(),
+  created: z.string(),
 });
 
 const ApiResponseSchema = z.object({
