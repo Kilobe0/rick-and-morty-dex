@@ -14,7 +14,7 @@ Uma aplicação web construída com Next.js, Tailwind CSS e React Query para lis
 
 - **Framework:** Next.js (App Router)
 - **Estilização:** Tailwind CSS
-- **Data Fetching:** React Query (TanStack Query)
+- **Data Fetching:** React Query
 - **Animações:** Framer Motion
 - **Requisições HTTP:** Axios
 - **Ícones:** Lucide React
@@ -41,4 +41,4 @@ Uma aplicação web construída com Next.js, Tailwind CSS e React Query para lis
 
 ## 🔗 Deploy
 
-A aplicação está disponível em: [link-da-vercel-aqui.vercel.app](https://link-da-vercel-aqui.vercel.app)
+A aplicação está disponível em: [link-da-vercel-aqui.vercel.app](https://rick-and-morty-dex-seven.vercel.app)
