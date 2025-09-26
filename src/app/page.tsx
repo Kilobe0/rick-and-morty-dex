@@ -39,8 +39,14 @@ export default function HomePage() {
   const allCharacters = data?.pages.flatMap((page) => page.results) ?? [];
 
   return (
-    <main className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-center mb-8">Rick and Morty Dex</h1>
+    <main className="container mx-auto px-6 py-8">
+      <div className="text-center mb-8">
+        <h2 className="text-3xl font-bold mb-4">Explore the Rick and Morty Universe</h2>
+        <p className="text-muted-foreground max-w-2xl mx-auto">
+          Discover all your favorite characters from the multiverse. Search, filter, and explore detailed information about each character.
+        </p>
+      </div>
+      
       <SearchBar value={search} onChange={(e) => setSearch(e.target.value)} />
 
       {isLoading && <LoadingGrid />}
