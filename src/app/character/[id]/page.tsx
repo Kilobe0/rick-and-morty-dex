@@ -23,7 +23,7 @@ export default async function CharacterDetailPage({ params }: DetailPageProps) {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-card/50 to-background/80 py-8">
-      <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
+      <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
         {/* Header com imagem e informações principais */}
         <div className="flex flex-col items-center text-center mb-8">
           <div className="relative mb-6">
@@ -72,13 +72,13 @@ export default async function CharacterDetailPage({ params }: DetailPageProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Informações Básicas */}
           <Card className="bg-card/80 backdrop-blur-sm border-primary/20 shadow-lg hover:shadow-xl transition-all duration-300">
-            <CardHeader>
-              <CardTitle className="text-xl font-inter-heading text-primary flex items-center">
+            <CardHeader className="text-center">
+              <CardTitle className="text-xl font-inter-heading text-primary">
                 Basic Info
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-3">
-              <div className="grid grid-cols-2 gap-3 text-sm md:text-base">
+            <CardContent className="space-y-4">
+              <div className="grid grid-cols-2 gap-4 text-sm md:text-base">
                 <div className="space-y-1">
                   <p className="font-medium text-muted-foreground">ID</p>
                   <p className="font-inter-subheading">{character.id}</p>
@@ -107,23 +107,23 @@ export default async function CharacterDetailPage({ params }: DetailPageProps) {
 
           {/* Origem e Localização */}
           <Card className="bg-card/80 backdrop-blur-sm border-primary/20 shadow-lg hover:shadow-xl transition-all duration-300">
-            <CardHeader>
-              <CardTitle className="text-xl font-inter-heading text-primary flex items-center gap-2">
+            <CardHeader className="text-center">
+              <CardTitle className="text-xl font-inter-heading text-primary">
                 Localization
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="space-y-2">
+              <div className="space-y-1">
                 <p className="font-medium text-muted-foreground">Origin</p>
-                <p className="font-inter-subheading text-lg">
+                <p className="font-inter-subheading">
                   {character.origin.name}
                 </p>
               </div>
-              <div className="space-y-2">
+              <div className="space-y-1">
                 <p className="font-medium text-muted-foreground">
                   Last Known Location
                 </p>
-                <p className="font-inter-subheading text-lg">
+                <p className="font-inter-subheading">
                   {character.location.name}
                 </p>
               </div>
@@ -132,13 +132,13 @@ export default async function CharacterDetailPage({ params }: DetailPageProps) {
 
           {/* Episódios */}
           <Card className="bg-card/80 backdrop-blur-sm border-primary/20 shadow-lg hover:shadow-xl transition-all duration-300 md:col-span-2">
-            <CardHeader>
-              <CardTitle className="text-xl font-inter-heading text-primary flex items-center gap-2">
+            <CardHeader className="text-center">
+              <CardTitle className="text-xl font-inter-heading text-primary gap-2">
                 Episodes ({character.episode.length})
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="max-h-48 overflow-y-auto pr-2">
+              <div className="max-h-48 overflow-y-auto">
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
                   {character.episode.map((episodeUrl, index) => {
                     const episodeNumber = episodeUrl.split("/").pop();
