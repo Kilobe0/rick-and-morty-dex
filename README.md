@@ -1,6 +1,6 @@
 # Rick and Morty Dex
 
-Uma aplicação web construída com Next.js, Tailwind CSS e React Query para listar, buscar e ver detalhes dos personagens do universo de Rick and Morty.
+Uma aplicação web construída com Next.js e Tailwind CSS, para listar, buscar e ver detalhes dos personagens do universo de Rick and Morty.
 
 ## ✨ Features
 
