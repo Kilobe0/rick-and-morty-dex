@@ -1,12 +1,7 @@
 // src/app/character/[id]/page.tsx
-import { getCharacterById } from '@/lib/api';
-import Image from 'next/image';
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
+import { getCharacterById } from "@/lib/api";
+import Image from "next/image";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface DetailPageProps {
   params: Promise<{ id: string }>;
@@ -42,23 +37,31 @@ export default async function CharacterDetailPage({ params }: DetailPageProps) {
                 priority
               />
             </div>
-            <div className={`absolute -top-2 -right-2 w-6 h-6 rounded-full border-2 border-background shadow-lg ${
-              character.status === 'Alive' ? 'bg-green-500' :
-              character.status === 'Dead' ? 'bg-red-500' :
-              'bg-gray-500'
-            }`} />
+            <div
+              className={`absolute -top-2 -right-2 w-6 h-6 rounded-full border-2 border-background shadow-lg ${
+                character.status === "Alive"
+                  ? "bg-green-500"
+                  : character.status === "Dead"
+                  ? "bg-red-500"
+                  : "bg-gray-500"
+              }`}
+            />
           </div>
-          
+
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 font-inter-title bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
             {character.name}
           </h1>
-          
+
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-card border shadow-sm">
-            <span className={`w-2 h-2 rounded-full ${
-              character.status === 'Alive' ? 'bg-green-500' :
-              character.status === 'Dead' ? 'bg-red-500' :
-              'bg-gray-500'
-            }`} />
+            <span
+              className={`w-2 h-2 rounded-full ${
+                character.status === "Alive"
+                  ? "bg-green-500"
+                  : character.status === "Dead"
+                  ? "bg-red-500"
+                  : "bg-gray-500"
+              }`}
+            />
             <p className="text-lg md:text-xl text-muted-foreground font-inter-heading">
               {character.status} - {character.species}
             </p>
@@ -114,11 +117,17 @@ export default async function CharacterDetailPage({ params }: DetailPageProps) {
             <CardContent className="space-y-4">
               <div className="space-y-2">
                 <p className="font-medium text-muted-foreground">Origem</p>
-                <p className="font-inter-subheading text-lg">{character.origin.name}</p>
+                <p className="font-inter-subheading text-lg">
+                  {character.origin.name}
+                </p>
               </div>
               <div className="space-y-2">
-                <p className="font-medium text-muted-foreground">Localização Atual</p>
-                <p className="font-inter-subheading text-lg">{character.location.name}</p>
+                <p className="font-medium text-muted-foreground">
+                  Localização Atual
+                </p>
+                <p className="font-inter-subheading text-lg">
+                  {character.location.name}
+                </p>
               </div>
             </CardContent>
           </Card>
@@ -135,7 +144,7 @@ export default async function CharacterDetailPage({ params }: DetailPageProps) {
               <div className="max-h-48 overflow-y-auto pr-2">
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
                   {character.episode.map((episodeUrl, index) => {
-                    const episodeNumber = episodeUrl.split('/').pop();
+                    const episodeNumber = episodeUrl.split("/").pop();
                     return (
                       <div
                         key={index}
@@ -165,7 +174,7 @@ export default async function CharacterDetailPage({ params }: DetailPageProps) {
                 <div className="space-y-1">
                   <p className="font-medium text-muted-foreground">Criado em</p>
                   <p className="font-inter-subheading">
-                    {new Date(character.created).toLocaleDateString('pt-BR')}
+                    {new Date(character.created).toLocaleDateString("pt-BR")}
                   </p>
                 </div>
                 <a
