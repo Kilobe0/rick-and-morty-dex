@@ -1,0 +1,51 @@
+// src/components/CharacterCard.tsx
+import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { Character } from '@/lib/api';
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+
+interface CharacterCardProps {
+  character: Character;
+}
+
+export default function CharacterCard({ character }: CharacterCardProps) {
+
+  return (
+    <motion.div whileHover={{ y: -5 }} transition={{ type: 'spring', stiffness: 400, damping: 10 }}>
+      <Link href={`/character/${character.id}`} className="block group">
+        <Card className="overflow-hidden h-full flex flex-col">
+          <CardHeader className="p-0">
+            <div className="aspect-square relative overflow-hidden">
+              <Image
+                src={character.image}
+                alt={character.name}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+          </CardHeader>
+          <CardContent className="p-4 flex-grow">
+            <CardTitle className="text-lg truncate group-hover:text-primary">{character.name}</CardTitle>
+            <p className="text-sm text-muted-foreground">{character.species}</p>
+          </CardContent>
+          <CardFooter className="p-4 pt-0">
+            <span className={`inline-flex items-center rounded-full px-2 py-1 text-xs font-medium ${
+              character.status === 'Alive' ? 'bg-green-100 text-green-800' :
+              character.status === 'Dead' ? 'bg-red-100 text-red-800' :
+              'bg-gray-100 text-gray-800'
+            }`}>
+              {character.status}
+            </span>
+          </CardFooter>
+        </Card>
+      </Link>
+    </motion.div>
+  );
+}
