@@ -77,7 +77,7 @@ export default async function CharacterDetailPage({ params }: DetailPageProps) {
                 Basic Info
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="space-y-4 text-center">
               <div className="grid grid-cols-2 gap-4 text-sm md:text-base">
                 <div className="space-y-1">
                   <p className="font-medium text-muted-foreground">ID</p>
@@ -112,7 +112,7 @@ export default async function CharacterDetailPage({ params }: DetailPageProps) {
                 Localization
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="space-y-4 text-center">
               <div className="space-y-1">
                 <p className="font-medium text-muted-foreground">Origin</p>
                 <p className="font-inter-subheading">
