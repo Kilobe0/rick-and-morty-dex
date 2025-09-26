@@ -11,7 +11,6 @@ import CharacterGrid from '@/components/CharacterGrid';
 import LoadMoreButton from '@/components/LoadMoreButton';
 import ErrorMessage from '@/components/ErrorMessage';
 import LoadingGrid from './loading'; // Componente de loading
-import { SearchSlash } from 'lucide-react';
 
 export default function HomePage() {
   const [search, setSearch] = useState('');
