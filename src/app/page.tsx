@@ -41,7 +41,7 @@ export default function HomePage() {
   return (
     <main className="container mx-auto px-6 py-8">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold mb-4">Explore the Rick and Morty Universe</h2>
+        <h2 className="text-3xl font-bold mb-4 font-inter-subheading">Explore the Rick and Morty Universe</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
           Discover all your favorite characters from the multiverse. Search, filter, and explore detailed information about each character.
         </p>
