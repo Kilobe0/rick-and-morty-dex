@@ -31,9 +31,9 @@ export default async function CharacterDetailPage({ params }: DetailPageProps) {
               className="rounded-2xl border-4 border-primary shadow-xl w-full max-w-xs lg:max-w-none"
             />
             <div className={`absolute -top-2 -right-2 w-6 h-6 rounded-full border-2 border-background ${
-              character.status === 'Alive' ? 'bg-success' :
-              character.status === 'Dead' ? 'bg-destructive' :
-              'bg-muted'
+              character.status === 'Alive' ? 'bg-green-600' :
+              character.status === 'Dead' ? 'bg-red-500' :
+              'bg-gray-500'
             }`} />
           </div>
         </div>
