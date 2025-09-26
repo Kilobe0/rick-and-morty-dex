@@ -32,8 +32,8 @@ export default function CharacterCard({ character }: CharacterCardProps) {
             </div>
           </CardHeader>
           <CardContent className="p-4 flex-grow">
-            <CardTitle className="text-lg truncate group-hover:text-primary">{character.name}</CardTitle>
-            <p className="text-sm text-muted-foreground">{character.species}</p>
+            <CardTitle className="text-lg truncate group-hover:text-primary font-inter-subheading">{character.name}</CardTitle>
+            <p className="text-sm text-muted-foreground text-description">{character.species}</p>
           </CardContent>
           <CardFooter className="p-4 pt-0">
             <span className={`inline-flex items-center rounded-full px-2 py-1 text-xs font-medium ${

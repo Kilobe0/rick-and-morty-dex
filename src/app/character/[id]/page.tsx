@@ -39,8 +39,8 @@ export default async function CharacterDetailPage({ params }: DetailPageProps) {
         </div>
         
         <div className="flex-1 text-center lg:text-left">
-          <h1 className="text-4xl lg:text-5xl font-bold mb-3">{character.name}</h1>
-          <p className="text-lg lg:text-xl text-muted-foreground mb-6">
+          <h1 className="text-4xl lg:text-5xl font-bold mb-3 font-inter-title">{character.name}</h1>
+          <p className="text-lg lg:text-xl text-muted-foreground mb-6 text-description">
             {character.status} - {character.species}
           </p>
           
@@ -48,8 +48,8 @@ export default async function CharacterDetailPage({ params }: DetailPageProps) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             <div className="space-y-6">
               <div>
-                <h3 className="text-lg font-semibold text-primary mb-3">Informações Básicas</h3>
-                <div className="space-y-2 text-sm lg:text-base">
+                <h3 className="text-lg font-semibold text-primary mb-3 font-inter-heading">Informações Básicas</h3>
+                <div className="space-y-2 text-sm lg:text-base text-long">
                   <p><span className="font-medium">ID:</span> {character.id}</p>
                   <p><span className="font-medium">Status:</span> {character.status}</p>
                   <p><span className="font-medium">Espécie:</span> {character.species}</p>
@@ -59,22 +59,22 @@ export default async function CharacterDetailPage({ params }: DetailPageProps) {
               </div>
               
               <div>
-                <h3 className="text-lg font-semibold text-primary mb-3">Origem</h3>
-                <p className="text-sm lg:text-base">{character.origin.name}</p>
+                <h3 className="text-lg font-semibold text-primary mb-3 font-inter-heading">Origem</h3>
+                <p className="text-sm lg:text-base text-long">{character.origin.name}</p>
               </div>
             </div>
             
             <div className="space-y-6">
               <div>
-                <h3 className="text-lg font-semibold text-primary mb-3">Localização</h3>
-                <p className="text-sm lg:text-base">{character.location.name}</p>
+                <h3 className="text-lg font-semibold text-primary mb-3 font-inter-heading">Localização</h3>
+                <p className="text-sm lg:text-base text-long">{character.location.name}</p>
               </div>
               
               <div>
-                <h3 className="text-lg font-semibold text-primary mb-3">Episódios</h3>
-                <p className="text-sm mb-2">{character.episode.length} episódio(s)</p>
+                <h3 className="text-lg font-semibold text-primary mb-3 font-inter-heading">Episódios</h3>
+                <p className="text-sm mb-2 text-long">{character.episode.length} episódio(s)</p>
                 <div className="max-h-32 overflow-y-auto">
-                  <ul className="space-y-1 text-xs lg:text-sm">
+                  <ul className="space-y-1 text-xs lg:text-sm text-reading">
                     {character.episode.map((episodeUrl, index) => {
                       const episodeNumber = episodeUrl.split('/').pop();
                       return (
@@ -88,8 +88,8 @@ export default async function CharacterDetailPage({ params }: DetailPageProps) {
               </div>
               
               <div>
-                <h3 className="text-lg font-semibold text-primary mb-3">Informações Adicionais</h3>
-                <div className="space-y-2 text-xs lg:text-sm">
+                <h3 className="text-lg font-semibold text-primary mb-3 font-inter-heading">Informações Adicionais</h3>
+                <div className="space-y-2 text-xs lg:text-sm text-long">
                   <p><span className="font-medium">Criado em:</span> {new Date(character.created).toLocaleDateString('pt-BR')}</p>
                   <p>
                     <span className="font-medium">URL:</span>{' '}
