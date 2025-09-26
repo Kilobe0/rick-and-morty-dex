@@ -14,7 +14,6 @@ Uma aplicação web construída com Next.js, Tailwind CSS e React Query para lis
 
 - **Framework:** Next.js (App Router)
 - **Estilização:** Tailwind CSS
-- **Data Fetching:** React Query
 - **Animações:** Framer Motion
 - **Requisições HTTP:** Axios
 - **Ícones:** Lucide React
@@ -23,7 +22,7 @@ Uma aplicação web construída com Next.js, Tailwind CSS e React Query para lis
 
 1.  **Clone o repositório:**
     ```bash
-    git clone https://github.com/seu-usuario/rick-and-morty-dex.git
+    git clone https://github.com/Kilobe0/rick-and-morty-dex.git
     ```
 2.  **Acesse a pasta do projeto:**
     ```bash
@@ -41,4 +40,4 @@ Uma aplicação web construída com Next.js, Tailwind CSS e React Query para lis
 
 ## 🔗 Deploy
 
-A aplicação está disponível em: [link-da-vercel-aqui.vercel.app](https://rick-and-morty-dex-seven.vercel.app)
+A aplicação está disponível em: [rick-and-morty-dex-seven.vercel.app](https://rick-and-morty-dex-seven.vercel.app)
