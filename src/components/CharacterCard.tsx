@@ -22,7 +22,7 @@ export default function CharacterCard({ character }: CharacterCardProps) {
       transition={{ type: "spring", stiffness: 400, damping: 10 }}
     >
       <Link href={`/character/${character.id}`} className="block group">
-        <Card className="overflow-hidden h-full flex flex-col">
+        <Card className="overflow-hidden h-full flex flex-col py-0 gap-0">
           <CardHeader className="p-0">
             <div className="aspect-square relative overflow-hidden">
               <Image
