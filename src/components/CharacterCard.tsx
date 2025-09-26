@@ -6,7 +6,6 @@ import { Character } from "@/lib/api";
 import {
   Card,
   CardContent,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
