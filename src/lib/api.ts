@@ -6,7 +6,6 @@ const apiClient = axios.create({
   baseURL: 'https://rickandmortyapi.com/api',
 });
 
-// Esquemas de validação com Zod (opcional, mas recomendado)
 const CharacterSchema = z.object({
   id: z.number(),
   name: z.string(),

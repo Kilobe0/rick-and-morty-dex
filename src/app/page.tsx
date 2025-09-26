@@ -11,6 +11,7 @@ import CharacterGrid from '@/components/CharacterGrid';
 import LoadMoreButton from '@/components/LoadMoreButton';
 import ErrorMessage from '@/components/ErrorMessage';
 import LoadingGrid from './loading'; // Componente de loading
+import { SearchSlash } from 'lucide-react';
 
 export default function HomePage() {
   const [search, setSearch] = useState('');
@@ -50,7 +51,7 @@ export default function HomePage() {
       <SearchBar value={search} onChange={(e) => setSearch(e.target.value)} />
 
       {isLoading && <LoadingGrid />}
-      {error && <ErrorMessage message={error.message} />}
+      {error && <ErrorMessage message={error.message.includes("404") ? "Character not found" : "Something went wrong"} />}
       
       {!isLoading && !error && (
         <>
