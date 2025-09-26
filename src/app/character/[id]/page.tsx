@@ -3,12 +3,13 @@ import { getCharacterById } from '@/lib/api';
 import Image from 'next/image';
 
 interface DetailPageProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 // Metadata dinâmico para SEO
 export async function generateMetadata({ params }: DetailPageProps) {
-  const character = await getCharacterById(Number(params.id));
+  const { id } = await params;
+  const character = await getCharacterById(Number(id));
   return {
     title: `${character.name} | Rick and Morty Dex`,
     description: `Details about ${character.name}`,
@@ -16,7 +17,8 @@ export async function generateMetadata({ params }: DetailPageProps) {
 }
 
 export default async function CharacterDetailPage({ params }: DetailPageProps) {
-  const character = await getCharacterById(Number(params.id));
+  const { id } = await params;
+  const character = await getCharacterById(Number(id));
 
   return (
     <div className="container mx-auto px-6 py-8">
