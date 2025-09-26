@@ -11,26 +11,6 @@ export default function Header() {
           Rick and Morty Dex
         </Link>
         <div className="flex items-center gap-4">
-          <nav className="hidden md:flex items-center gap-6">
-            <Link 
-              href="/" 
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              Characters
-            </Link>
-            <Link 
-              href="/" 
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-            >
-              Episodes
-            </Link>
-            <Link 
-              href="/" 
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-            >
-              Locations
-            </Link>
-          </nav>
           <ThemeToggle />
         </div>
       </div>
