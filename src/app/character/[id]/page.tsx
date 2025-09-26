@@ -72,10 +72,9 @@ export default async function CharacterDetailPage({ params }: DetailPageProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Informações Básicas */}
           <Card className="bg-card/80 backdrop-blur-sm border-primary/20 shadow-lg hover:shadow-xl transition-all duration-300">
-            <CardHeader className="pb-3">
-              <CardTitle className="text-xl font-inter-heading text-primary flex items-center gap-2">
-                <span className="w-2 h-2 bg-primary rounded-full" />
-                Informações Básicas
+            <CardHeader>
+              <CardTitle className="text-xl font-inter-heading text-primary flex items-center">
+                Basic Info
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
@@ -89,17 +88,17 @@ export default async function CharacterDetailPage({ params }: DetailPageProps) {
                   <p className="font-inter-subheading">{character.status}</p>
                 </div>
                 <div className="space-y-1">
-                  <p className="font-medium text-muted-foreground">Espécie</p>
+                  <p className="font-medium text-muted-foreground">Species</p>
                   <p className="font-inter-subheading">{character.species}</p>
                 </div>
                 <div className="space-y-1">
-                  <p className="font-medium text-muted-foreground">Gênero</p>
+                  <p className="font-medium text-muted-foreground">Gender</p>
                   <p className="font-inter-subheading">{character.gender}</p>
                 </div>
               </div>
               {character.type && (
                 <div className="space-y-1">
-                  <p className="font-medium text-muted-foreground">Tipo</p>
+                  <p className="font-medium text-muted-foreground">Type</p>
                   <p className="font-inter-subheading">{character.type}</p>
                 </div>
               )}
@@ -108,22 +107,21 @@ export default async function CharacterDetailPage({ params }: DetailPageProps) {
 
           {/* Origem e Localização */}
           <Card className="bg-card/80 backdrop-blur-sm border-primary/20 shadow-lg hover:shadow-xl transition-all duration-300">
-            <CardHeader className="pb-3">
+            <CardHeader>
               <CardTitle className="text-xl font-inter-heading text-primary flex items-center gap-2">
-                <span className="w-2 h-2 bg-primary rounded-full" />
-                Localização
+                Localization
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
-                <p className="font-medium text-muted-foreground">Origem</p>
+                <p className="font-medium text-muted-foreground">Origin</p>
                 <p className="font-inter-subheading text-lg">
                   {character.origin.name}
                 </p>
               </div>
               <div className="space-y-2">
                 <p className="font-medium text-muted-foreground">
-                  Localização Atual
+                  Last Known Location
                 </p>
                 <p className="font-inter-subheading text-lg">
                   {character.location.name}
@@ -134,10 +132,9 @@ export default async function CharacterDetailPage({ params }: DetailPageProps) {
 
           {/* Episódios */}
           <Card className="bg-card/80 backdrop-blur-sm border-primary/20 shadow-lg hover:shadow-xl transition-all duration-300 md:col-span-2">
-            <CardHeader className="pb-3">
+            <CardHeader>
               <CardTitle className="text-xl font-inter-heading text-primary flex items-center gap-2">
-                <span className="w-2 h-2 bg-primary rounded-full" />
-                Episódios ({character.episode.length})
+                Episodes ({character.episode.length})
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -163,16 +160,17 @@ export default async function CharacterDetailPage({ params }: DetailPageProps) {
 
           {/* Informações Adicionais */}
           <Card className="bg-card/80 backdrop-blur-sm border-primary/20 shadow-lg hover:shadow-xl transition-all duration-300 md:col-span-2">
-            <CardHeader className="pb-3">
+            <CardHeader>
               <CardTitle className="text-xl font-inter-heading text-primary flex items-center gap-2">
-                <span className="w-2 h-2 bg-primary rounded-full" />
-                Informações Adicionais
+                Additional Info
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                 <div className="space-y-1">
-                  <p className="font-medium text-muted-foreground">Criado em</p>
+                  <p className="font-medium text-muted-foreground"> 
+                    Created
+                  </p>
                   <p className="font-inter-subheading">
                     {new Date(character.created).toLocaleDateString("pt-BR")}
                   </p>
@@ -183,7 +181,7 @@ export default async function CharacterDetailPage({ params }: DetailPageProps) {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200 font-inter-subheading text-sm"
                 >
-                  Ver na API
+                  View on API
                 </a>
               </div>
             </CardContent>
